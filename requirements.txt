@@ -1,0 +1,10 @@
+bootstrap_flask==2.5.0
+email_validator==2.3.0
+Flask==2.3.2
+Flask_CKEditor==1.0.0
+Flask_Login==0.6.3
+flask_sqlalchemy==3.1.1
+flask_wtf==1.2.2
+SQLAlchemy==2.0.46
+Werkzeug==3.1.5
+WTForms==3.0.1
