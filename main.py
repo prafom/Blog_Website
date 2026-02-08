@@ -15,7 +15,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import RegisterForm, LoginForm, CreatePostForm, CommentForm
 from sqlalchemy import ForeignKey
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 
 
 '''
@@ -43,6 +44,7 @@ Bootstrap5(app)
 class Base(DeclarativeBase):
     pass
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
